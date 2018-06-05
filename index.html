@@ -62,6 +62,102 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-FFMPEG-一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/undefined/undefined/undefined/undefined/" class="article-date">
+  <time datetime="2018-06-05T00:42:34.000Z" itemprop="datePublished">2018-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/undefined/undefined/undefined/undefined/">FFMPEG(一)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="FFMPEG-是什么？"><a href="#FFMPEG-是什么？" class="headerlink" title="FFMPEG 是什么？"></a>FFMPEG 是什么？</h3><ul>
+<li>A complete, cross-platform solution to record, convert and stream audio and video. </li>
+<li>FF的意思是Fast-forward</li>
+<li>MPEG全称是moving picture expert group</li>
+<li>也就是一种更高效的，移动图像解决方案</li>
+</ul>
+<h3 id="MPEG的发展历史"><a href="#MPEG的发展历史" class="headerlink" title="MPEG的发展历史"></a>MPEG的发展历史</h3><ul>
+<li>具体可参考 <a href="https://mpeg.chiariglione.org/standards" target="_blank" rel="noopener">link</a></li>
+<li>几个重要的版本<ul>
+<li>mpeg1：第一代版本，无论从图像分辨率还是音频采样率上来讲，都比较一般，代表产品是VCD。这也奠定了我们今后音视频的标准。比如音频：32khz(广播效果),44.1khz(mp3效果),48khz(高清效果)。</li>
+<li>mpeg2：mpeg2在mpeg1基础上做了升级，视频分辨率和音频采样率都更丰富，代表产品是DVD。</li>
+<li>mpeg4：4代定下了h.264编码规范，这在今后的视频应用中都是很重要的。</li>
+<li>mpeg7：7代中推出了pull和push的概念，即我们想给视频素材增加标签，则push相应的信息上去；想要搜索符合”周杰伦唱片”的话，就pull下来。这对作品的分类和知识产权的保护都是很重要的。</li>
+</ul>
+</li>
+</ul>
+<h3 id="FFMPEG应用案例-ijkplayer"><a href="#FFMPEG应用案例-ijkplayer" class="headerlink" title="FFMPEG应用案例 - ijkplayer"></a>FFMPEG应用案例 - ijkplayer</h3><ul>
+<li>介绍：这是bilibili的开源视频播放器，应用广泛</li>
+<li>获取方式：<pre><code>* https://github.com/Bilibili/ijkplayer
+* 编译工程：
+* 1. sh ./init-ios.sh
+* 2. sh ./init-ios-openssl.sh
+* 3. ./compile-ffmpeg.sh clean &amp;  ./compile-ffmpeg.sh clean  all 
+</code></pre></li>
+</ul>
+<h3 id="FFMPEG目录结构及功能"><a href="#FFMPEG目录结构及功能" class="headerlink" title="FFMPEG目录结构及功能"></a>FFMPEG目录结构及功能</h3><ul>
+<li>libavcodec:用于各种类型声音/图像编解码；</li>
+<li>libavutil：包含一些公共的工具函数；</li>
+<li>libavformat：包含多种多媒体容器格式的封装、解封装工具</li>
+<li>libswscale：用于视频场景比例缩放、色彩映射转换；</li>
+<li>libpostproc：用于后期效果处理；</li>
+<li>libavdevice：用于音视频数据采集和渲染等功能的设备相关</li>
+<li>libswresample：用于音频重采样和格式转换等功能</li>
+<li>libavfilter：包含多媒体处理常用的滤镜功能</li>
+</ul>
+<h3 id="应用举例"><a href="#应用举例" class="headerlink" title="应用举例"></a>应用举例</h3><h4 id="查看视频基本信息"><a href="#查看视频基本信息" class="headerlink" title="查看视频基本信息"></a>查看视频基本信息</h4><ul>
+<li>ffmpeg -i test.mp4</li>
+<li>ffmpeg -i test.mp4 -vcodec libx264 -preset fast -crf 32 -y -vf “scale=1280:720” -acodec libmp3lame -ab 32k out-compress.mp4</li>
+<li>-crf: 这是用于指定输出视频的质量，取值范围是0-51，默认值为23，数字越小输出视频的质量越高。这个选项会直接影响到输出视频的码率。一般来说，压制480p用20左右，压制720p用16-18</li>
+</ul>
+<h4 id="把音视频替换背景音乐："><a href="#把音视频替换背景音乐：" class="headerlink" title="把音视频替换背景音乐："></a>把音视频替换背景音乐：</h4><ul>
+<li>ffmpeg -i test.mp4 -vcodec copy -an videoNoAudioSubtitle.mp4</li>
+<li>ffmpeg -i videoNoAudioSubtitle.mp4 -i ts-music.mp3 -vcodec copy -acodec copy output.mp4</li>
+</ul>
+<h4 id="制作一个类似抖音小视频"><a href="#制作一个类似抖音小视频" class="headerlink" title="制作一个类似抖音小视频"></a>制作一个类似抖音小视频</h4><ul>
+<li>ffmpeg -y -i test.mp4 -ignore_loop 0 -i jump.gif  -filter_complex overlay=x=0:0:shortest=1 test_out8.mp4</li>
+<li>压缩gif：ffmpeg -i jump.gif -vf scale=iw/4:-1 resize_jump.gif</li>
+<li>格式转换：ffmpeg -y -i test.mp4 -ignore_loop 0 -i resize_jump.gif  -filter_complex overlay=x=50:30:shortest=1 test_out8.mp4</li>
+</ul>
+<h3 id="视频流和视频"><a href="#视频流和视频" class="headerlink" title="视频流和视频"></a>视频流和视频</h3><ul>
+<li>视频流是基于编码的，常见的流格式是h.264</li>
+<li>常说的视频是视频+音频混制而成，比如.avi, .mp4等等都是。</li>
+</ul>
+<h3 id="常见的流媒体协议"><a href="#常见的流媒体协议" class="headerlink" title="常见的流媒体协议"></a>常见的流媒体协议</h3><ul>
+<li>RTSP+RTP</li>
+<li>RTMP</li>
+<li>RTMFP</li>
+<li>MMS</li>
+<li>HTTP</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr6w0000ejni5bd5c3p9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Start-My-Way" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/undefined/undefined/undefined/undefined/" class="article-date">
@@ -100,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0580m200017jnirtpsajrb" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr730001ejni9ye3siox" class="article-share-link">Share</a>
       
       
     </footer>
@@ -148,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji059mes00008bniaepggjoc" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr8a0002ejni4anejl43" class="article-share-link">Share</a>
       
       
     </footer>
@@ -193,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0580ls00007jnidbi7zu45" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr8d0003ejnirfnmnk3e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -232,6 +328,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/undefined/undefined/undefined/undefined/">FFMPEG(一)</a>
+          </li>
         
           <li>
             <a href="/undefined/undefined/undefined/undefined/">Start My Way</a>

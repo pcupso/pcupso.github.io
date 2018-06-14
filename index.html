@@ -62,6 +62,81 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-iOS-Calendar-EventKit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/undefined/undefined/undefined/undefined/" class="article-date">
+  <time datetime="2018-06-14T03:47:52.000Z" itemprop="datePublished">2018-06-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/undefined/undefined/undefined/undefined/">iOS - Calendar EventKit</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="iOS日历踩坑"><a href="#iOS日历踩坑" class="headerlink" title="iOS日历踩坑"></a>iOS日历踩坑</h3><h4 id="实践起因"><a href="#实践起因" class="headerlink" title="实践起因"></a>实践起因</h4><ul>
+<li>产品最近想给app添加日历提醒功能，弥补推送不及时和到达率不高的问题</li>
+</ul>
+<h4 id="Calendar-EventKit-介绍"><a href="#Calendar-EventKit-介绍" class="headerlink" title="Calendar EventKit 介绍"></a>Calendar EventKit 介绍</h4><ul>
+<li>之前做过siriKit的开发，并结合产品功能添加到app中，EventKit较siriKit模块更简单一些。</li>
+<li><p>EventKit分类</p>
+<ul>
+<li>Reminder: 增加提醒时间，这类事件会增加到“提醒事项”app中</li>
+<li>Event: 这是普通事件，比如Alarm闹铃</li>
+</ul>
+</li>
+<li><p>具体详细的介绍，参看帖子</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/7c1b65ca2f35" target="_blank" rel="noopener">传送门</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="EventKit-遇到的坑"><a href="#EventKit-遇到的坑" class="headerlink" title="EventKit 遇到的坑"></a>EventKit 遇到的坑</h4><ul>
+<li>坑一： Error Domain=EKErrorDomain Code=14 “日历没有来源” UserInfo={NSLocalizedDescription=日历没有来源}<ul>
+<li>这是个比较坑的地方，首先我们搞清楚日历来源是什么？在代码中是EKSource的值（EKSource <0x1746cdba0> {UUID = B6EE2BCC-3355-4C24-813A-52203FF6BF86; type = Local; title = Default; externalID = (null)}） 这样一串数据</0x1746cdba0></li>
+<li>日历来源一般选择local</li>
+<li>导致出现问题的原因有两个：<ul>
+<li>其一，是否提前让用户授权许可，注意这一点一定要在EKEventStore创建前（尽量放在app主页面viewDidLoad时候）。我吃了这个亏，在EKEventStore创建后再调用授权，这样就导致EKEventStore对象中没有sources</li>
+<li>其二，calendar对象source对象一定要赋值，否则会返回创建日历提醒成功，但实际上并没有事件存在       </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>坑二：在删除多个事件的时候，记得使用事物。否则只会删一条，出错<ul>
+<li>[self.mEventStore removeReminder:reminder commit:NO error:&amp;err]，commit使用no，意思是不是不提交。数组遍历调用完成后，再[self.mEventStore commit:&amp;err] </li>
+</ul>
+</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>这个功能苹果提供的api并不算友好，比如没有赋值calendar的resource时候，仍然能创建成功；比如创建calendar的错误提示信息过少。EventKit是个比较有用的功能，特别在工具app中，可以弥补推送的不足。踩完这些坑，神清气爽！</li>
+</ul>
+<h4 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h4><ul>
+<li>晚点整理一份demo提交到github。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhji0002zcnil8wsqrim" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-FFMPEG-一" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/undefined/undefined/undefined/undefined/" class="article-date">
@@ -148,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr6w0000ejni5bd5c3p9" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhix0000zcni5p3uk5u7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr730001ejni9ye3siox" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhj40001zcnibolp5ytw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -244,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr8a0002ejni4anejl43" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhjl0003zcnin8qu72sx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cji0zcr8d0003ejnirfnmnk3e" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhjn0004zcniqiycmadb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -328,6 +403,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/undefined/undefined/undefined/undefined/">iOS - Calendar EventKit</a>
+          </li>
         
           <li>
             <a href="/undefined/undefined/undefined/undefined/">FFMPEG(一)</a>

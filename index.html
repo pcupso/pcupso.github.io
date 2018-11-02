@@ -62,6 +62,154 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-weixin-miniprogram-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/undefined/undefined/undefined/undefined/" class="article-date">
+  <time datetime="2018-11-02T01:57:17.000Z" itemprop="datePublished">2018-11-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/undefined/undefined/undefined/undefined/">weixin_miniprogram-1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="探索小程序，技术框架层面"><a href="#探索小程序，技术框架层面" class="headerlink" title="探索小程序，技术框架层面"></a>探索小程序，技术框架层面</h3><h4 id="为什么探索？"><a href="#为什么探索？" class="headerlink" title="为什么探索？"></a>为什么探索？</h4><ul>
+<li>最近朋友做蛋糕生意的，提议如果能做个小程序辅助销售就好了，而且这不是少数的需求。正好自己也知道，于是摸索学习一下。</li>
+</ul>
+<h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><ol>
+<li>前往微信公众平台申请小程序，一个邮箱只能申请一个</li>
+<li>保存好app id等信息</li>
+<li>下载微信小程序开发IDE</li>
+<li>创建工程</li>
+</ol>
+<h4 id="目录接口"><a href="#目录接口" class="headerlink" title="目录接口"></a>目录接口</h4><ul>
+<li>一个页面page = js+json+wxml+wxss目录结构<ul>
+<li>该目录结构对应着前端开发三大模块，javascript=js，html=wxml，wxss=css，但是在这个基础上微信做了改造，写法上很相似。但增加了一些自己的方法，如wx:for,wx:if,wx:else等等,官方做的很好，文档写的很详细 </li>
+</ul>
+</li>
+<li>js<ul>
+<li>自己对js不太很了解，但小程序这个很容易懂。js里面对应着一个页面的生命周期，如onLoad,onHide等生命周期的函数，还有data:等数据函数。</li>
+<li>自己也可以增加自定义函数，绑定事件，或者增加网络请求等</li>
+<li>有个坑：data方法和onLoad都会进行数据初始化，小心覆盖数据。</li>
+</ul>
+</li>
+<li>json<ul>
+<li>我没用到 </li>
+</ul>
+</li>
+<li>wxml<ul>
+<li>这里面是标签语言，具体参看官方文档是最好的</li>
+<li>几个常用的标签,主要以<view></view>做分块，其他还有<image>,<text>,还有官方提供的<block>可以做逻辑判断或者for循环 </block></text></image></li>
+</ul>
+</li>
+<li>wxss<ul>
+<li>这里面跟css很像，自己也不是很明白，写页面挺简单的，猜一猜就能写</li>
+<li>学习了flex布局，参看 <a href="https://blog.guowenfh.com/2017/05/31/2017/flexLayout/" target="_blank" rel="noopener">文档</a> </li>
+</ul>
+</li>
+</ul>
+<h4 id="实现细节"><a href="#实现细节" class="headerlink" title="实现细节"></a>实现细节</h4><ul>
+<li>UI方面<br>  * </li>
+<li>网络方面<ol>
+<li>官方提供了wx.request,很方便</li>
+<li>自己做了post和get封装，包一下就好，简单易用</li>
+<li>调试方法：利用ide提供的sources可以端点调试，console打印数据</li>
+<li>遇到的坑：<ul>
+<li>【url无法访问】问题是没有开启ssl认证，idle右上方点击，授权ssl认证。另一方面，后台需要配置request的host地址，不然也是不行的</li>
+<li>【接口返回数据错误】原因：注意微信小程序后台url和请求的url是否一致</li>
+</ul>
+</li>
+<li>解析数据：这一点前端正是很方便，会解析好，a.data.result这样直接取，取好之后通过page的setData方法，调用this.setData({xx:dataArr})就好了，外面函数通过this.getData获取</li>
+</ol>
+</li>
+<li>数据存储<ul>
+<li>页面自身，通过setdata方法操作</li>
+</ul>
+</li>
+<li>页面传值<ul>
+<li>通过url，url？param1=xxx,在新页面中，onLoad中options.param1可以直接取到</li>
+<li>通过app全局存</li>
+<li>通过wx.storage来做，这边是key-value形式 </li>
+</ul>
+</li>
+<li>webview处理<ol>
+<li>新建一个page</li>
+<li>wxml中，需要声明一个脚本<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script></li>
+<li>创建webview <web-view src=""></web-view> </li>
+<li>直接wx.navigateTo()跳转就好了</li>
+</ol>
+</li>
+<li>其他<ul>
+<li>首页改变，在app.json中，调整pages顺序即可</li>
+<li>可以在app.json中设置全局属性，如timeout</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjnzddgnk0005k3niybi7wrvl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-iOS审核分享" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/undefined/undefined/undefined/undefined/" class="article-date">
+  <time datetime="2018-07-02T15:05:18.000Z" itemprop="datePublished">2018-07-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/undefined/undefined/undefined/undefined/">iOS审核分享</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><ul>
+<li>我开发的一款市场排名靠前的app，在2017年11月到2018年6月，持续被苹果审核团队拒绝上架，导致这半年来虽然在不断做迭代，实际没有给用户提供新体验，这段血泪史，记于此。</li>
+</ul>
+<p>### </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjnzddgnl0006k3niq3rpl6tw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-iOS-Calendar-EventKit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/undefined/undefined/undefined/undefined/" class="article-date">
@@ -112,7 +260,7 @@
 </li>
 </ul>
 </li>
-<li>坑二：在删除多个事件的时候，记得使用事物。否则只会删一条，出错<ul>
+<li>坑二：在删除多个事件的时候，记得使用事务提交。否则只会删一条而出错<ul>
 <li>[self.mEventStore removeReminder:reminder commit:NO error:&amp;err]，commit使用no，意思是不是不提交。数组遍历调用完成后，再[self.mEventStore commit:&amp;err] </li>
 </ul>
 </li>
@@ -127,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhji0002zcnil8wsqrim" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjnzddgni0004k3ni251q42r3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +371,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhix0000zcni5p3uk5u7" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjnzddgn60000k3nitk4598hb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -271,7 +419,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhj40001zcnibolp5ytw" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjnzddgnc0001k3niu592jifa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -319,7 +467,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhjl0003zcnin8qu72sx" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjnzddgne0002k3nidllp04xj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -364,7 +512,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjie7zhjn0004zcniqiycmadb" class="article-share-link">Share</a>
+      <a data-url="http://www.letron.cn/undefined/undefined/undefined/undefined/" data-id="cjnzddgng0003k3ni29h09esi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -392,7 +540,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
     </div>
   </div>
 
@@ -405,6 +553,14 @@
       <ul>
         
           <li>
+            <a href="/undefined/undefined/undefined/undefined/">weixin_miniprogram-1</a>
+          </li>
+        
+          <li>
+            <a href="/undefined/undefined/undefined/undefined/">iOS审核分享</a>
+          </li>
+        
+          <li>
             <a href="/undefined/undefined/undefined/undefined/">iOS - Calendar EventKit</a>
           </li>
         
@@ -414,14 +570,6 @@
         
           <li>
             <a href="/undefined/undefined/undefined/undefined/">Start My Way</a>
-          </li>
-        
-          <li>
-            <a href="/undefined/undefined/undefined/undefined/">立flag</a>
-          </li>
-        
-          <li>
-            <a href="/undefined/undefined/undefined/undefined/">Hello World</a>
           </li>
         
       </ul>

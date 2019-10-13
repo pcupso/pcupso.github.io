@@ -45,6 +45,7 @@
 			
 			if(key.equals("69664750-75f7-4888-804c-220183f39c78"))
 			{
+				// 2019.10.13
 				packageSender = "句容广业建设有限公司";
 				packageHolder = "江苏广兴集团有限公司";
 				projectName = "华阳北路东侧、崇明东路北侧农业银行综合办公楼新建工程（PPP项目）工程";
@@ -70,8 +71,9 @@
 				licenseDate = "2016-08-17";
 				confirmDate = "2017-12-08";
 			}
-			else if(key.equals(""))
+			else if(key.equals("0aef27b8-6153-4302-bcff-75cadf3a38f1"))
 			{
+				// 2019.10.13
 				packageSender = "扬中市中扬建设工程管理有限公司";
 				packageHolder = "江苏广兴集团有限公司";
 				projectName = "滨江小学建设工程";

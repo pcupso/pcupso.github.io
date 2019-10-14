@@ -12,7 +12,7 @@
 		<title>施工合同验证</title>
 		<link type="text/css" href="../css.css" rel="stylesheet">
 		<style><!-- /* Font Definitions */ @font-face	{font-family:宋体;	panose-1:2 1 6 0 3 1 1 1 1 1;}@font-face	{font-family:"\@宋体";	panose-1:2 1 6 0 3 1 1 1 1 1;}@font-face	{font-family:仿宋;	panose-1:2 1 6 9 6 1 1 1 1 1;}@font-face	{font-family:"\@仿宋";	panose-1:2 1 6 9 6 1 1 1 1 1;} /* Style Definitions */ p.MsoNormal, li.MsoNormal, div.MsoNormal	{margin:0cm;	margin-bottom:.0001pt;	text-align:justify;	text-justify:inter-ideograph;	font-size:10.5pt;	font-family:"Times New Roman";}p.Char, li.Char, div.Char	{margin:0cm;	margin-bottom:.0001pt;	text-align:justify;	text-justify:inter-ideograph;	font-size:10.5pt;	font-family:"Times New Roman";} /* Page Definitions */ @page Section1	{size:595.3pt 841.9pt;	margin:72.0pt 90.0pt 72.0pt 90.0pt;	layout-grid:15.6pt;}div.Section1	{page:Section1;}--></style>
-	
+
 		<%
 			String key= request.getParameter("Key");
 			String primaryKey = request.getParameter("primaryKey");
@@ -127,26 +127,35 @@
 				confirmDate = "";
 			}
 		%>
-		
+
 		<script type="text/javascript">
-			
-			function validCheck()
-			{
+			function validCheck() {
+				
 				var elPM = document.getElementById("pm");
 				var elTechOwner = document.getElementById("techOwner");
 				var elSafeOwner = document.getElementById("safeOwner");
 				var elBuilder = document.getElementById("builder");
-				
-				elPM.style.display = pmId=="" ? "none" : "block";
-				elTechOwner.style.display = techOwnerId=="" ? "none" : "block";
-				elSafeOwner.style.display = safeOwnerId=="" ? "none" : "block";
-				elBuilder.style.display = builder=="" ? "none" : "block";
-				
-				alert(buider, elBuilder.style.display);
+
+				var pmIdValue = document.getElementById("pmIdVal").innerHTML;
+				var techOwnerIdValue = document.getElementById("techOwnerIdVal").innerHTML;
+				var safeOwnerIdValue = document.getElementById("safeOwnerIdVal").innerHTML;
+				var builderValue = document.getElementById("builderVal").innerHTML;
+
+				if (elPM != null && pmIdValue == "") {
+					elPM.style.display = "none";
+				}
+				if (elTechOwner != null && techOwnerIdValue == "") {
+					elTechOwner.style.display = "none";
+				}
+				if (elSafeOwner != null && safeOwnerIdValue == "") {
+					elSafeOwner.style.display = "none";
+				}
+				if (elBuilder != null && builderValue == "") {
+					elBuilder.style.display = "none";
+				}
 			}
-			
 		</script>
-		
+
 	</head>
 	<body lang=ZH-CN style='text-justify-trim:punctuation' background='htba/shuiyin.png' onload="validCheck()">
 		<form id="form" method="post" action="/Jsjzyxyglpt/faces/check.jsp;jsessionid=7CF5691557D8A96885ACF1A79EFB8B67"
@@ -182,11 +191,11 @@
 								<%=safeOwner%></u></span></b></p>
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>质量员:<u>
 								<%=qualityOwner%></u></span></b></p>
-				
+
 				<div id="builder">
-					<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>施工员:<u><%=builder%></u></span></b></p>
+					<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>施工员:<u id="builderVal"><%=builder%></u></span></b></p>
 				</div>
-				
+
 				<table style='background-image:url(htba/photoLibrary/select.jpg);background-repeat:no-repeat;' border=0>
 					<tr>
 						<td align=right>
@@ -196,19 +205,19 @@
 				</table>
 			</div>
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>岗位人员身份证信息:</span></b></p>
-			
+
 			<div id="pm">
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目经理:<u><%=projectManager%>,<%=pmId%></u><br /><img onerror="this.style.display='none';" src='<%=pmIcon%>'></span></b></p>
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目经理:<u><%=projectManager%>,<a id="pmIdVal"><%=pmId%></a></u><br /><img onerror="this.style.display='none';" src='<%=pmIcon%>'></span></b></p>
 			</div>
-							
+
 			<div id="techOwner">
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u><%=techOwner%>,<%=techOwnerId%></u><br /><img onerror="this.style.display='none';" src='<%=techOwnerIcon%>'></span></b></p>
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u><%=techOwner%>,<a id="techOwnerIdVal"><%=techOwnerId%></a></u><br /><img onerror="this.style.display='none';" src='<%=techOwnerIcon%>'></span></b></p>
 			</div>
-			
-			<div id ="safeOwner">
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner%>,<%=safeOwnerId%></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon%>'></span></b></p>
+
+			<div id="safeOwner">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner%>,<a id="safeOwnerIdVal"><%=safeOwnerId%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon%>'></span></b></p>
 			</div>
-			
+
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>人员未变更</span></b></p>
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>无分包信息</span></b></p>
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;	font-family:仿宋;color:black'>施工许可证号:

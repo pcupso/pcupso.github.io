@@ -75,33 +75,33 @@
 			else if (code.equals("bdc4cf12-1b42-4d8b-a114-24d1f34be356"))
 			{
 				// 2019.10.13
-				buildCompanyName = "江苏容港建设管理有限公司";
-				projectName = "江苏容港建设管理有限公司工业厂房";
-				projectPlace = "句容市郭庄镇";
+				buildCompanyName = "句容广业建设有限公司";
+				projectName = "句容市农业银行综合楼";
+				projectPlace = "华阳北路东侧与崇明东路北侧交叉口";
 				projectCategory = "房屋建筑工程";
-				price = "963.62";
-				constructType = "框架结构　　 地上 3 层　地下 0 层";
+				price = "4788.37";
+				constructType = "框架剪力墙结构 地上：十一层　地下：一层";
 				lineLength = "";
 				otherTechTag = "";
-				startDate = "2017-09-18";
-				finishDate = "2018-05-10";
-				buildLicense = "321183201801090101";
-				planLicense = "句规核（2019）第60001号";
-				checkBookNo = "10242（2017）第0483号";
+				startDate = "2016-08-23";
+				finishDate = "2017-11-30";
+				buildLicense = "321183201608170101";
+				planLicense = "句建第321183201600071号";
+				checkBookNo = "10242（2016）第0655号";
 				prospectCompany = "句容市建筑勘察设计研究院";
-				prospectLevel = "建筑行业丙级";
-				designCompany = "苏州城发建筑设计院有限公司";
-				designLevel = "建筑行业甲级";
+				prospectLevel = "丙级";
+				designCompany = "华诚博远工程技术集团有限公司";
+				designLevel = "甲级";
 				buildCompany = "江苏广兴集团有限公司";
-				buildLevel = "房屋建筑工程施工总承包壹级";
-				manageCompany = "句容市精诚建设咨询有限公司";
-				manageLevel = "甲级";
+				buildLevel = "一级";
+				manageCompany = "江苏信诚工程管理咨询有限公司";
+				manageLevel = "乙级";
 				qualityManage = "句容市建设工程质量监督站";
-				manageNo = "3211830201700310628";
-				curBeianBuilding = "工业厂房（南京中小企业创业园A-1#楼）";
-				beianNo = "3211831507280102-JX-004";
+				manageNo = "3211830201600010001";
+				curBeianBuilding = "句容市农业银行综合办公楼";
+				beianNo = "3211831507280102-JX-001";
 				beianDate = "2019-02-01";
-				finishCheckDate = "2018-05-10";
+				finishCheckDate = "2017-11-30";
 			}
 			else
 			{

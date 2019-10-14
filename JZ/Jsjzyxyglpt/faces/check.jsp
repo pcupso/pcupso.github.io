@@ -126,11 +126,29 @@
 				licenseDate = "";
 				confirmDate = "";
 			}
-		
 		%>
 		
+		<script type="text/javascript">
+			
+			function validCheck()
+			{
+				var elPM = document.getElementById("pm");
+				var elTechOwner = document.getElementById("techOwner");
+				var elSafeOwner = document.getElementById("safeOwner");
+				var elBuilder = document.getElementById("builder");
+				
+				elPM.style.display = pmId=="" ? "none" : "block";
+				elTechOwner.style.display = techOwnerId=="" ? "none" : "block";
+				elSafeOwner.style.display = safeOwnerId=="" ? "none" : "block";
+				elBuilder.style.display = builder=="" ? "none" : "block";
+				
+				alert(buider, elBuilder.style.display);
+			}
+			
+		</script>
+		
 	</head>
-	<body lang=ZH-CN style='text-justify-trim:punctuation' background='htba/shuiyin.png'>
+	<body lang=ZH-CN style='text-justify-trim:punctuation' background='htba/shuiyin.png' onload="validCheck()">
 		<form id="form" method="post" action="/Jsjzyxyglpt/faces/check.jsp;jsessionid=7CF5691557D8A96885ACF1A79EFB8B67"
 		 enctype="application/x-www-form-urlencoded">
 			<input id="form:action" type="hidden" name="form:action" />
@@ -164,8 +182,11 @@
 								<%=safeOwner%></u></span></b></p>
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>质量员:<u>
 								<%=qualityOwner%></u></span></b></p>
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>施工员:<u>
-								<%=builder%></u></span></b></p>
+				
+				<div id="builder">
+					<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>施工员:<u><%=builder%></u></span></b></p>
+				</div>
+				
 				<table style='background-image:url(htba/photoLibrary/select.jpg);background-repeat:no-repeat;' border=0>
 					<tr>
 						<td align=right>
@@ -175,15 +196,19 @@
 				</table>
 			</div>
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>岗位人员身份证信息:</span></b></p>
-			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目经理:<u>
-							<%=projectManager%>,
-							<%=pmId%></u><br /><img onerror="this.style.display='none';" src='<%=pmIcon%>'></span></b></p>
-			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u>
-							<%=techOwner%>,
-							<%=techOwnerId%></u><br /><img onerror="this.style.display='none';" src='<%=techOwnerIcon%>'></span></b></p>
-			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u>
-							<%=safeOwner%>,
-							<%=safeOwnerId%></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon%>'></span></b></p>
+			
+			<div id="pm">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目经理:<u><%=projectManager%>,<%=pmId%></u><br /><img onerror="this.style.display='none';" src='<%=pmIcon%>'></span></b></p>
+			</div>
+							
+			<div id="techOwner">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u><%=techOwner%>,<%=techOwnerId%></u><br /><img onerror="this.style.display='none';" src='<%=techOwnerIcon%>'></span></b></p>
+			</div>
+			
+			<div id ="safeOwner">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner%>,<%=safeOwnerId%></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon%>'></span></b></p>
+			</div>
+			
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>人员未变更</span></b></p>
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>无分包信息</span></b></p>
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;	font-family:仿宋;color:black'>施工许可证号:

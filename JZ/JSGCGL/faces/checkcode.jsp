@@ -41,7 +41,8 @@
 			String beianDate = "";
 			String finishCheckDate = "";
 			
-			if (code.equals("4a4d1d44-1294-4ad3-a7b1-26fe22880b8a"))
+			if (code.equals("4a4d1d44-1294-4ad3-a7b1-26fe22880b8a") ||
+				code.equals("4a4ef244-1294-4ad3-a7b1-222ef6880b8a"))
 			{
 				// 2019.10.08
 				buildCompanyName = "镇江市城市干道工程建设办公室";
@@ -76,7 +77,7 @@
 			{
 				// 2019.10.13
 				buildCompanyName = "句容广业建设有限公司";
-				projectName = "句容市农业银行综合楼";
+				projectName = "句容市农业银行综合办公楼";
 				projectPlace = "华阳北路东侧与崇明东路北侧交叉口";
 				projectCategory = "房屋建筑工程";
 				price = "4788.37";
@@ -89,11 +90,11 @@
 				planLicense = "句建第321183201600071号";
 				checkBookNo = "10242（2016）第0655号";
 				prospectCompany = "句容市建筑勘察设计研究院";
-				prospectLevel = "丙级";
+				prospectLevel = "建筑行业丙级";
 				designCompany = "华诚博远工程技术集团有限公司";
-				designLevel = "甲级";
+				designLevel = "建筑行业甲级";
 				buildCompany = "江苏广兴集团有限公司";
-				buildLevel = "一级";
+				buildLevel = "房屋建筑工程施工总承包壹级";
 				manageCompany = "江苏信诚工程管理咨询有限公司";
 				manageLevel = "乙级";
 				qualityManage = "句容市建设工程质量监督站";
@@ -102,6 +103,36 @@
 				beianNo = "3211831507280102-JX-001";
 				beianDate = "2019-02-01";
 				finishCheckDate = "2017-11-30";
+			}
+			else if (code.equals("b7c5c270-f247-411f-85e2-4d7f512ebe8f"))
+			{
+				buildCompanyName = "扬中市中扬建设工程管理有限公司";
+				projectName = "扬中市滨江小学建设工程";
+				projectPlace = "三茅街道翠竹南路";
+				projectCategory = "房屋建筑工程";
+				price = "3852.23";
+				constructType = "地上：框架  结构  四层地下：一层";
+				lineLength = "";
+				otherTechTag = "";
+				startDate = "2016-10-25";
+				finishDate = "2017-12-29";
+				buildLicense = "321182201609140101";
+				planLicense = "建字第321182201600113号";
+				checkBookNo = "10171（2016）第0049号";
+				prospectCompany = "镇江市勘察工程总公司";
+				prospectLevel = "建筑行业乙级";
+				designCompany = "启迪设计集团股份有限公司";
+				designLevel = "建筑行业甲级";
+				buildCompany = "江苏广兴集团有限公司";
+				buildLevel = "房屋建筑工程施工总承包壹级";
+				manageCompany = "南京第一建设事务所有限责任公司";
+				manageLevel = "甲级";
+				qualityManage = "扬中市建设工程质量监督站";
+				manageNo = "3211820201600260047";
+				curBeianBuilding = "扬中市滨江小学建设工程";
+				beianNo = "3211821509150102-JX-001";
+				beianDate = "2019-05-21";
+				finishCheckDate = "2017-12-29";
 			}
 			else
 			{

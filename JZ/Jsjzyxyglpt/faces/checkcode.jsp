@@ -41,7 +41,8 @@
 			String beianDate = "";
 			String finishCheckDate = "";
 			
-			if (code.equals("4a4d1d44-1294-4ad3-a7b1-26fe22880b8a"))
+			if (code.equals("4a4d1d44-1294-4ad3-a7b1-26fe22880b8a") ||
+				code.equals("4a4ef244-1294-4ad3-a7b1-222ef6880b8a"))
 			{
 				// 2019.10.08
 				buildCompanyName = "镇江市城市干道工程建设办公室";

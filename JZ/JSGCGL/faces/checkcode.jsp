@@ -87,7 +87,7 @@
 				startDate = "2016-08-23";
 				finishDate = "2017-11-30";
 				buildLicense = "321183201608170101";
-				planLicense = "句建第321183201600071号";
+				planLicense = "建字第321183201600071号";
 				checkBookNo = "10242（2016）第0655号";
 				prospectCompany = "句容市建筑勘察设计研究院";
 				prospectLevel = "建筑行业丙级";

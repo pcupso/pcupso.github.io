@@ -52,7 +52,7 @@
 				price = "47,883,700.00";
 				planStartDate = "2016-07-20";
 				planEndDate = "2018-05-16";
-				beianCode = "3211832016081002A0100";
+				beianCode = "3211832016081002A01000";
 				projectCode = "3211831605310101";
 				checkCode = "4240d780-9d72-4897-8de9-cc1336e2e30a";
 				projectManager = "韩宏喜";
@@ -177,12 +177,9 @@
 								<%=planEndDate%></u></span></b></p>
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>合同备案码：<u>
 								<%=beianCode%></u></span></b></p>
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目编码：<u>
-								<%=projectCode%></u></span></b></p>
-				<p class=MsoNormal><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>合同验证码:<br>&nbsp;&nbsp;&nbsp;&nbsp;<u>
-								<%=checkCode%></u></span></b></p>
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目经理:<u>
-								<%=projectManager%></u></span></b></p>
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目编码：<u><%=projectCode%></u></span></b></p>
+				<p class=MsoNormal><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>合同验证码:<br>&nbsp;&nbsp;&nbsp;&nbsp;<u><%=checkCode%></u></span></b></p>
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目经理:<u><%=projectManager%></u></span></b></p>
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目主管:<u>
 								<%=projectLeader%></u></span></b></p>
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u>

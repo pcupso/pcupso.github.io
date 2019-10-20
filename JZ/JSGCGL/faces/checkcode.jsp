@@ -134,6 +134,36 @@
 				beianDate = "2019-05-21";
 				finishCheckDate = "2017-12-29";
 			}
+			else if (code.equals("ae1cc589-f427-891f-66e2-4d7f392ebe8f"))
+			{
+				buildCompanyName = "句容市白兔镇人民政府（江苏句容兴拓建设发展有限公司）";
+				projectName = "行香中心小学异地新建工程";
+				projectPlace = "句容市白兔镇";
+				projectCategory = "房屋建筑工程";
+				price = "5203.60";
+				constructType = "框架结构 地上4层 地下0层";
+				lineLength = "";
+				otherTechTag = "";
+				startDate = "2016-07-18";
+				finishDate = "2017-02-02";
+				buildLicense = "321183201607250101";
+				planLicense = "句规镇建20162018";
+				checkBookNo = "（2015）第053-1号";
+				prospectCompany = "江苏中森建筑设计有限公司句容分公司";
+				prospectLevel = "甲级";
+				designCompany = "江苏省建筑园林设计院有限公司";
+				designLevel = "甲级";
+				buildCompany = "江苏拓科集团有限公司";
+				buildLevel = "房屋建筑工程施工总承包壹级";
+				manageCompany = "镇江市华普建设监理有限责任公司";
+				manageLevel = "甲级";
+				qualityManage = "句容市建设工程质量监督站";
+				manageNo = "3211830201601060624";
+				curBeianBuilding = "行香中心小学异地新建工程";
+				beianNo = "3211831606100101-JX-001";
+				beianDate = "2018-05-31";
+				finishCheckDate = "2018-05-04";
+			}
 			else
 			{
 				buildCompanyName = "";

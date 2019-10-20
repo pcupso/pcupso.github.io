@@ -99,6 +99,33 @@
 				licenseDate = "2016-09-14";
 				confirmDate = "2018-01-12";
 			}
+			else if(key.equals("0fdf29b8-6783-4662-bfcf-75a38cadf3f1"))
+			{
+				packageSender = "";
+				packageHolder = "";
+				projectName = "";
+				price = "";
+				planStartDate = "";
+				planEndDate = "";
+				beianCode = "";
+				projectCode = "";
+				checkCode = "";
+				projectManager = "";
+				projectLeader = "";
+				techOwner = "";
+				safeOwner = "";
+				qualityOwner = "";
+				builder = "";
+				pmId = "";
+				pmIcon = "";
+				techOwnerId = "";
+				techOwnerIcon = "";
+				safeOwnerId = "";
+				safeOwnerIcon = "";
+				buildLicense = "";
+				licenseDate = "";
+				confirmDate = "";
+			}
 			else 
 			{
 				packageSender = "";

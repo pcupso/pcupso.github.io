@@ -37,11 +37,28 @@
 			String pmIcon = "";
 			String techOwnerId = "";
 			String techOwnerIcon = "";
-			String safeOwnerId = "";
-			String safeOwnerIcon = "";
 			String buildLicense = "";
 			String licenseDate = "";
 			String confirmDate = "";
+			
+			String safeOwner1 = "";
+			String safeOwnerId1 = "";
+			String safeOwnerIcon1 = "";
+			String safeOwner2 = "";
+			String safeOwnerId2 = "";
+			String safeOwnerIcon2 = "";
+			String safeOwner3 = "";
+			String safeOwnerId3 = "";
+			String safeOwnerIcon3 = "";
+			String safeOwner4 = "";
+			String safeOwnerId4 = "";
+			String safeOwnerIcon4 = "";
+			String safeOwner5 = "";
+			String safeOwnerId5 = "";
+			String safeOwnerIcon5 = "";
+			String safeOwner6 = "";
+			String safeOwnerId6 = "";
+			String safeOwnerIcon6 = "";
 			
 			if(key.equals("69664750-75f7-4888-804c-220183f39c78"))
 			{
@@ -65,8 +82,9 @@
 				pmIcon = "http://221.230.25.173:8080/JSGCSB/rygl/photos/32112319630408661X.bmp";
 				techOwnerId = "321123196202236218";
 				techOwnerIcon = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321123196202236218.bmp";
-				safeOwnerId = "321123197212216610";
-				safeOwnerIcon = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321123197212216610.bmp";
+				safeOwner1 = safeOwner;
+				safeOwnerId1 = "321123197212216610";
+				safeOwnerIcon1 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321123197212216610.bmp";
 				buildLicense = "321183201608170101";
 				licenseDate = "2016-08-17";
 				confirmDate = "2017-12-08";
@@ -93,38 +111,61 @@
 				pmIcon = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321123197810250077.bmp";
 				techOwnerId = "";
 				techOwnerIcon = "";
-				safeOwnerId = "321111199104171922";
-				safeOwnerIcon = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321111199104171922.bmp";
+				safeOwner1 = safeOwner;
+				safeOwnerId1 = "321111199104171922";
+				safeOwnerIcon1 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321111199104171922.bmp";
 				buildLicense = "321182201609140101";
 				licenseDate = "2016-09-14";
 				confirmDate = "2018-01-12";
 			}
 			else if(key.equals("0fdf29b8-6783-4662-bfcf-75a38cadf3f1"))
 			{
-				packageSender = "";
-				packageHolder = "";
-				projectName = "";
-				price = "";
-				planStartDate = "";
-				planEndDate = "";
-				beianCode = "";
-				projectCode = "";
-				checkCode = "";
-				projectManager = "";
+				packageSender = "句容市白兔镇人民政府（江苏句容兴拓建设发展有限公司）";
+				packageHolder = "江苏拓科集团有限公司";
+				projectName = "白兔镇城镇化建设项目（PPP)工程";
+				price = "349,384,807.33";
+				planStartDate = "2016-07-18";
+				planEndDate = "2017-02-02";
+				beianCode = "3211832016071401A01000";
+				projectCode = "3211831604140101";
+				checkCode = "a9f0fa5c-f017-423e-8947-de3363ca0da6";
+				projectManager = "谭同海";
 				projectLeader = "";
-				techOwner = "";
-				safeOwner = "";
-				qualityOwner = "";
-				builder = "";
-				pmId = "";
-				pmIcon = "";
-				techOwnerId = "";
-				techOwnerIcon = "";
-				safeOwnerId = "";
-				safeOwnerIcon = "";
-				buildLicense = "";
-				licenseDate = "";
-				confirmDate = "";
+				techOwner = "秦维义";
+				safeOwner = "詹重红,黄长春,倪道林,王越越,王秀和,吴德根";
+				qualityOwner = "胡丕伟,侯桂花,吴旗,谷军,秦萍,宋通学";
+				builder = "高瑞林,郭金林,赵丰琦,季海鹏,黄公平,陈旺";
+				pmId = "321088196805137713";
+				pmIcon = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321088196805137713.bmp";
+				techOwnerId = "320422196507056938";
+				techOwnerIcon = "http://221.230.25.173:8080/JSGCSB/rygl/photos/320422196507056938.bmp";
+				buildLicense = "321183201607250101";
+				licenseDate = "2016-07-25";
+				confirmDate = "2018-05-04";
+				
+				safeOwner1 = "吴德根";
+				safeOwnerId1 = "321123197009244931";
+				safeOwnerIcon1 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321123197009244931.bmp";
+				
+				safeOwner2 = "倪道林";
+				safeOwnerId2 = "321123197106097339";
+				safeOwnerIcon2 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321123197106097339.bmp";
+				
+				safeOwner3 = "詹重红";
+				safeOwnerId3 = "321123197404104920";
+				safeOwnerIcon3 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321123197404104920.bmp";
+				
+				safeOwner4 = "王秀和";
+				safeOwnerId4 = "321183197906113612";
+				safeOwnerIcon4 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321183197906113612.bmp";
+				
+				safeOwner5 = "黄长春";
+				safeOwnerId5 = "321183198701215310";
+				safeOwnerIcon5 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321183198701215310.bmp";
+				
+				safeOwner6 = "王越越";
+				safeOwnerId6 = "321183198902120043";
+				safeOwnerIcon6 = "http://221.230.25.173:8080/JSGCSB/rygl/photos/321183198902120043.bmp";
 			}
 			else 
 			{
@@ -159,27 +200,73 @@
 			function validCheck() {
 				
 				var elPM = document.getElementById("pm");
-				var elTechOwner = document.getElementById("techOwner");
-				var elSafeOwner = document.getElementById("safeOwner");
-				var elBuilder = document.getElementById("builder");
-
 				var pmIdValue = document.getElementById("pmIdVal").innerHTML;
+				
+				var elTechOwner = document.getElementById("techOwner");
 				var techOwnerIdValue = document.getElementById("techOwnerIdVal").innerHTML;
-				var safeOwnerIdValue = document.getElementById("safeOwnerIdVal").innerHTML;
+				
+				var elBuilder = document.getElementById("builder");
 				var builderValue = document.getElementById("builderVal").innerHTML;
 
+				var elTechOwnerLabel = document.getElementById("techOwnerLabel");
+				var techOwnerLabelValue = document.getElementById("techOwnerLabelVal").innerHTML;
+				
+				var elProjectLeaderLabel = document.getElementById("projectLeaderLabel");
+				var projectLeaderLabelValue = document.getElementById("projectLeaderLabelVal").innerHTML;
+				
+				
+				var elSafeOwner1 = document.getElementById("safeOwner1");
+				var safeOwnerId1Value = document.getElementById("safeOwnerId1Val").innerHTML;
+				
+				var elSafeOwner2 = document.getElementById("safeOwner2");
+				var safeOwnerId2Value = document.getElementById("safeOwnerId2Val").innerHTML;
+				
+				var elSafeOwner3 = document.getElementById("safeOwner3");
+				var safeOwnerId3Value = document.getElementById("safeOwnerId3Val").innerHTML;
+				
+				var elSafeOwner4 = document.getElementById("safeOwner4");
+				var safeOwnerId4Value = document.getElementById("safeOwnerId4Val").innerHTML;
+				
+				var elSafeOwner5 = document.getElementById("safeOwner5");
+				var safeOwnerId5Value = document.getElementById("safeOwnerId5Val").innerHTML;
+				
+				var elSafeOwner6 = document.getElementById("safeOwner6");
+				var safeOwnerId6Value = document.getElementById("safeOwnerId6Val").innerHTML;
+				
 				if (elPM != null && pmIdValue == "") {
 					elPM.style.display = "none";
 				}
 				if (elTechOwner != null && techOwnerIdValue == "") {
 					elTechOwner.style.display = "none";
 				}
-				if (elSafeOwner != null && safeOwnerIdValue == "") {
-					elSafeOwner.style.display = "none";
+				if (elSafeOwner1 != null && safeOwnerId1Value == "") {
+					elSafeOwner1.style.display = "none";
+				}
+				if (elSafeOwner2 != null && safeOwnerId2Value == "") {
+					elSafeOwner2.style.display = "none";
+				}
+				if (elSafeOwner3 != null && safeOwnerId3Value == "") {
+					elSafeOwner3.style.display = "none";
+				}
+				if (elSafeOwner4 != null && safeOwnerId4Value == "") {
+					elSafeOwner4.style.display = "none";
+				}
+				if (elSafeOwner5 != null && safeOwnerId5Value == "") {
+					elSafeOwner5.style.display = "none";
+				}
+				if (elSafeOwner6 != null && safeOwnerId6Value == "") {
+					elSafeOwner6.style.display = "none";
 				}
 				if (elBuilder != null && builderValue == "") {
 					elBuilder.style.display = "none";
 				}
+				if (elTechOwnerLabel != null && techOwnerLabelValue == "") {
+					elTechOwnerLabel.style.display = "none";
+				}
+				if (elProjectLeaderLabel != null && projectLeaderLabelValue == "") {
+					elProjectLeaderLabel.style.display = "none";
+				}
+				
 			}
 		</script>
 
@@ -207,12 +294,16 @@
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目编码：<u><%=projectCode%></u></span></b></p>
 				<p class=MsoNormal><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>合同验证码:<br>&nbsp;&nbsp;&nbsp;&nbsp;<u><%=checkCode%></u></span></b></p>
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目经理:<u><%=projectManager%></u></span></b></p>
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目主管:<u>
-								<%=projectLeader%></u></span></b></p>
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u>
-								<%=techOwner%></u></span></b></p>
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u>
-								<%=safeOwner%></u></span></b></p>
+				
+				<div id="projectLeaderLabel">
+					<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>项目主管:<u id="projectLeaderLabelVal"><%=projectLeader%></u></span></b></p>
+				</div>
+				
+				<div id="techOwnerLabel">
+					<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u id="techOwnerLabelVal"><%=techOwner%></u></span></b></p>
+				</div>
+				
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner%></u></span></b></p>
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>质量员:<u>
 								<%=qualityOwner%></u></span></b></p>
 
@@ -238,8 +329,28 @@
 				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>技术负责人:<u><%=techOwner%>,<a id="techOwnerIdVal"><%=techOwnerId%></a></u><br /><img onerror="this.style.display='none';" src='<%=techOwnerIcon%>'></span></b></p>
 			</div>
 
-			<div id="safeOwner">
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner%>,<a id="safeOwnerIdVal"><%=safeOwnerId%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon%>'></span></b></p>
+			<div id="safeOwner1">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner1%>,<a id="safeOwnerId1Val"><%=safeOwnerId1%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon1%>'></span></b></p>
+			</div>
+			
+			<div id="safeOwner2">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner2%>,<a id="safeOwner2IdVal"><%=safeOwnerId2%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon2%>'></span></b></p>
+			</div>
+			
+			<div id="safeOwner3">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner3%>,<a id="safeOwner3IdVal"><%=safeOwnerId3%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon3%>'></span></b></p>
+			</div>
+			
+			<div id="safeOwner4">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner4%>,<a id="safeOwner4IdVal"><%=safeOwnerId4%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon4%>'></span></b></p>
+			</div>
+			
+			<div id="safeOwner5">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner5%>,<a id="safeOwner5IdVal"><%=safeOwnerId5%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon5%>'></span></b></p>
+			</div>
+			
+			<div id="safeOwner6">
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner6%>,<a id="safeOwner6IdVal"><%=safeOwnerId6%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon6%>'></span></b></p>
 			</div>
 
 			<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>人员未变更</span></b></p>

@@ -188,8 +188,8 @@
 				pmIcon = "";
 				techOwnerId = "";
 				techOwnerIcon = "";
-				safeOwnerId = "";
-				safeOwnerIcon = "";
+				safeOwnerId1 = "";
+				safeOwnerIcon1 = "";
 				buildLicense = "";
 				licenseDate = "";
 				confirmDate = "";
@@ -207,31 +207,30 @@
 				
 				var elBuilder = document.getElementById("builder");
 				var builderValue = document.getElementById("builderVal").innerHTML;
-
+				
 				var elTechOwnerLabel = document.getElementById("techOwnerLabel");
 				var techOwnerLabelValue = document.getElementById("techOwnerLabelVal").innerHTML;
 				
 				var elProjectLeaderLabel = document.getElementById("projectLeaderLabel");
 				var projectLeaderLabelValue = document.getElementById("projectLeaderLabelVal").innerHTML;
-				
-				
+
 				var elSafeOwner1 = document.getElementById("safeOwner1");
-				var safeOwnerId1Value = document.getElementById("safeOwnerId1Val").innerHTML;
-				
+				var safeOwner1IdValue = document.getElementById("safeOwner1IdVal").innerHTML;
+
 				var elSafeOwner2 = document.getElementById("safeOwner2");
-				var safeOwnerId2Value = document.getElementById("safeOwnerId2Val").innerHTML;
+				var safeOwner2IdValue = document.getElementById("safeOwner2IdVal").innerHTML;
 				
 				var elSafeOwner3 = document.getElementById("safeOwner3");
-				var safeOwnerId3Value = document.getElementById("safeOwnerId3Val").innerHTML;
+				var safeOwner3IdValue = document.getElementById("safeOwner3IdVal").innerHTML;
 				
 				var elSafeOwner4 = document.getElementById("safeOwner4");
-				var safeOwnerId4Value = document.getElementById("safeOwnerId4Val").innerHTML;
+				var safeOwner4IdValue = document.getElementById("safeOwner4IdVal").innerHTML;
 				
 				var elSafeOwner5 = document.getElementById("safeOwner5");
-				var safeOwnerId5Value = document.getElementById("safeOwnerId5Val").innerHTML;
+				var safeOwner5IdValue = document.getElementById("safeOwner5IdVal").innerHTML;
 				
 				var elSafeOwner6 = document.getElementById("safeOwner6");
-				var safeOwnerId6Value = document.getElementById("safeOwnerId6Val").innerHTML;
+				var safeOwner6IdValue = document.getElementById("safeOwner6IdVal").innerHTML;
 				
 				if (elPM != null && pmIdValue == "") {
 					elPM.style.display = "none";
@@ -239,34 +238,38 @@
 				if (elTechOwner != null && techOwnerIdValue == "") {
 					elTechOwner.style.display = "none";
 				}
-				if (elSafeOwner1 != null && safeOwnerId1Value == "") {
-					elSafeOwner1.style.display = "none";
-				}
-				if (elSafeOwner2 != null && safeOwnerId2Value == "") {
-					elSafeOwner2.style.display = "none";
-				}
-				if (elSafeOwner3 != null && safeOwnerId3Value == "") {
-					elSafeOwner3.style.display = "none";
-				}
-				if (elSafeOwner4 != null && safeOwnerId4Value == "") {
-					elSafeOwner4.style.display = "none";
-				}
-				if (elSafeOwner5 != null && safeOwnerId5Value == "") {
-					elSafeOwner5.style.display = "none";
-				}
-				if (elSafeOwner6 != null && safeOwnerId6Value == "") {
-					elSafeOwner6.style.display = "none";
-				}
+				
 				if (elBuilder != null && builderValue == "") {
 					elBuilder.style.display = "none";
 				}
+				
+				
 				if (elTechOwnerLabel != null && techOwnerLabelValue == "") {
 					elTechOwnerLabel.style.display = "none";
 				}
+				
 				if (elProjectLeaderLabel != null && projectLeaderLabelValue == "") {
 					elProjectLeaderLabel.style.display = "none";
 				}
 				
+				if (elSafeOwner1 != null && safeOwner1IdValue == "") {
+					elSafeOwner1.style.display = "none";
+				}
+				if (elSafeOwner2 != null && safeOwner2IdValue == "") {
+					elSafeOwner2.style.display = "none";
+				}
+				if (elSafeOwner3 != null && safeOwner3IdValue == "") {
+					elSafeOwner3.style.display = "none";
+				}
+				if (elSafeOwner4 != null && safeOwner4IdValue == "") {
+					elSafeOwner4.style.display = "none";
+				}
+				if (elSafeOwner5 != null && safeOwner5IdValue == "") {
+					elSafeOwner5.style.display = "none";
+				}
+				if (elSafeOwner6 != null && safeOwner6IdValue == "") {
+					elSafeOwner6.style.display = "none";
+				}
 			}
 		</script>
 
@@ -330,7 +333,7 @@
 			</div>
 
 			<div id="safeOwner1">
-				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner1%>,<a id="safeOwnerId1Val"><%=safeOwnerId1%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon1%>'></span></b></p>
+				<p class=MsoNormal style='line-height:22.0pt'><b><span style='font-size:13.0pt;font-family:仿宋;color:black'>安全员:<u><%=safeOwner1%>,<a id="safeOwner1IdVal"><%=safeOwnerId1%></a></u><br /><img onerror="this.style.display='none';" src='<%=safeOwnerIcon1%>'></span></b></p>
 			</div>
 			
 			<div id="safeOwner2">

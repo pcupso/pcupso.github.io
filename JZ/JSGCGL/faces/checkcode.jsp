@@ -111,13 +111,13 @@
 				projectPlace = "三茅街道翠竹南路";
 				projectCategory = "房屋建筑工程";
 				price = "3852.23";
-				constructType = "地上：框架  结构  四层地下：一层";
+				constructType = "框架结构 地上4层 地下1层";
 				lineLength = "";
 				otherTechTag = "";
 				startDate = "2016-10-25";
 				finishDate = "2017-12-29";
 				buildLicense = "321182201609140101";
-				planLicense = "建字第321182201600113号";
+				planLicense = "建字第321182201600113";
 				checkBookNo = "10171（2016）第0049号";
 				prospectCompany = "镇江市勘察工程总公司";
 				prospectLevel = "建筑行业乙级";
@@ -130,7 +130,7 @@
 				qualityManage = "扬中市建设工程质量监督站";
 				manageNo = "3211820201600260047";
 				curBeianBuilding = "扬中市滨江小学建设工程";
-				beianNo = "3211821509150102-JX-001";
+				beianNo = "3211821708110102-JX-001";
 				beianDate = "2019-05-21";
 				finishCheckDate = "2017-12-29";
 			}

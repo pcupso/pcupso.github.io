@@ -81,7 +81,7 @@
 				projectPlace = "华阳北路东侧与崇明东路北侧交叉口";
 				projectCategory = "房屋建筑工程";
 				price = "4788.37";
-				constructType = "框架剪力墙结构 地上：11层　地下：1层";
+				constructType = "框架剪力墙结构 地上11层 地下1层";
 				lineLength = "";
 				otherTechTag = "";
 				startDate = "2016-08-23";
